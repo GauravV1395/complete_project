@@ -5,8 +5,8 @@ const { validateID } = require('../middlewares/utilitites');
 const { Employee } = require('../models/employee');
 const { Driver } = require('../models/driver');
 const twilio = require('twilio');
-const accountSid = "ACd91ff63c40a32b0895dff4a1dfa172c8";
-const authToken = "d5705e40d58587f060128f80bfa1b137";
+const accountSid = process.env.accountSid;
+const authToken = process.env.authToken;
 const client = require('twilio')(accountSid, authToken);
 
 // post trip
